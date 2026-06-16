@@ -1,3 +1,7 @@
+## 5.2.3
+
+- Fix imported scene maps appearing tiny/mispositioned on Foundry VTT v14. The scene was still being given a deprecated `Scene#background` object alongside the new `levels`, which conflicted with the level's texture. Now scenes are built with only the v14 Level (`fit:"fill"`, centered anchor), matching how v14 natively renders a background, so the map stretches to fill the scene rectangle.
+
 ## 5.2.2
 
 - Fix scene import failing validation on Foundry VTT v14 (`levels.0.name: may not be undefined`). The v14 Level document requires a `name`, which the 5.2.1 background fix omitted.
