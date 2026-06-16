@@ -1,3 +1,8 @@
+## 5.2.4
+
+- Fix scene walls/grid being slightly misaligned with the map on Foundry VTT v14. v14's per-level `textures` offset uses the opposite sign convention from the old `Scene#background` offset, so the background-positioning offset is now negated.
+- Fix the import-complete chat message failing on v14 (`type: "0" is not a valid type for the ChatMessage Document class`). Removed the obsolete numeric `type` so the message posts again.
+
 ## 5.2.3
 
 - Fix imported scene maps appearing tiny/mispositioned on Foundry VTT v14. The scene was still being given a deprecated `Scene#background` object alongside the new `levels`, which conflicted with the level's texture. Now scenes are built with only the v14 Level (`fit:"fill"`, centered anchor), matching how v14 natively renders a background, so the map stretches to fill the scene rectangle.
