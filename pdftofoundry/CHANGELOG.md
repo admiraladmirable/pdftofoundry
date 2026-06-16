@@ -1,3 +1,7 @@
+## 5.2.0
+
+- Add compatibility with Foundry VTT v14 (verified on v14; still supports v13)
+
 ## 5.0.0
 
 - Update to v12
