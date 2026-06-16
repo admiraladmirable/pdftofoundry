@@ -1,3 +1,7 @@
+## 5.2.2
+
+- Fix scene import failing validation on Foundry VTT v14 (`levels.0.name: may not be undefined`). The v14 Level document requires a `name`, which the 5.2.1 background fix omitted.
+
 ## 5.2.1
 
 - Fix imported scenes having no background on Foundry VTT v14. v14 moved the scene background image from `Scene#background` into the new per-level schema (`Level#background` / `Level#textures`), so scene maps now populate a `levels` entry. (Known limitation: the flip-mat "combine maps" feature is not yet ported to v14.)
