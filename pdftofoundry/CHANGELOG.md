@@ -1,3 +1,7 @@
+## 5.2.1
+
+- Fix imported scenes having no background on Foundry VTT v14. v14 moved the scene background image from `Scene#background` into the new per-level schema (`Level#background` / `Level#textures`), so scene maps now populate a `levels` entry. (Known limitation: the flip-mat "combine maps" feature is not yet ported to v14.)
+
 ## 5.2.0
 
 - Add compatibility with Foundry VTT v14 (verified on v14; still supports v13)
