@@ -1,3 +1,7 @@
+## 5.2.5
+
+- Fix imported NPC/monster tokens not appearing on scenes in Foundry VTT v14. v14 assigns every token to a scene Level; new tokens default to the level id `defaultLevel0000`, but the importer created its scene Level without a fixed id (Foundry assigned a random one), so the tokens were orphaned on a non-existent level and never drawn on the canvas. The scene Level is now created with the canonical `_id: "defaultLevel0000"` so tokens land on it and render.
+
 ## 5.2.4
 
 - Fix scene walls/grid being slightly misaligned with the map on Foundry VTT v14. v14's per-level `textures` offset uses the opposite sign convention from the old `Scene#background` offset, so the background-positioning offset is now negated.
